@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+.navbar {
+    @apply px-4 py-2 pt-4 flex justify-between flex-wrap
+}
+
+@screen md {
+    .navbar {
+        @apply px-8
+    }
+}
+
+.menuIcon {
+    @apply cursor-pointer self-center mr-2 block
+}
+
+@screen md {
+    .menuIcon {
+        @apply hidden
+    }
+}
+
+.menuItems {
+    @apply hidden w-full text-center
+}
+
+@screen md {
+    .menuItems {
+        @apply flex flex-grow w-auto
+    }
+}
+
+.header-hero {
+    @apply pb-20 px-4 py-4 flex flex-wrap justify-center
+}
+
+@screen md {
+    .header-hero {
+        @apply px-8
+    }
+}
+
+.header-hero-span {
+    @apply px-4 py-2 text-textColor font-semibold text-sm capitalize
+}
+
+.btn {
+    @apply w-full mx-auto py-3 px-8 rounded-full font-semibold my-1
+}
+
+.owl-item>img {
+    @apply max-w-5xl inline-block !important
+}
+
+.owl-prev>span {
+    @apply hidden
+}
+
+.owl-prev:before {
+    content: "\f060";
+    background: none;
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-family: "FontAwesome";
+    color: #47465A;
+    font-size: 70px;
+    left: 75px;
+    -webkit-text-stroke: 6px white;
+    text-stroke: 6px white;
+}
+
+.owl-next:before {
+    content: "\f061";
+    background: none;
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-family: "FontAwesome";
+    color: #47465A;
+    font-size: 70px;
+    right: 75px;
+    -webkit-text-stroke: 6px white;
+    text-stroke: 6px white;
+}
+
+.owl-next>span {
+    @apply hidden
+}
+
+@screen md {
+    .owl-prev:before {
+        left: 20px;
+        font-size: 60px;
+    }
+    .owl-next:before {
+        right: 20px;
+        font-size: 60px;
+    }
+    .owl-carousel .owl-item img {
+        width: 80%
+    }
+}
+
+.timeline-yr {
+    @apply w-20 h-20 bg-secondryColor rounded-full relative float-left mr-8;
+}
+
+.timeline-content-title-primary {
+    @apply capitalize text-base text-headingColor2 font-bold text-3xl ml-8 block;
+}
+
+.timeline-content-title-secondary {
+    @apply capitalize text-base text-secondryColor font-black;
+}
+
+.timeline-content-text {
+    @apply text-textColor tracking-wide text-lg font-light ml-24;
+}
+
+.timeline-yr>span {
+    top: 50%;
+    left: 50%;
+    @apply absolute text-white font-semibold transform -translate-x-1/2 -translate-y-1/2;
+}
+
+.timeline::before {
+    content: "";
+    background: #47465A;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 38px;
+}
+
+@screen lg {
+    .timeline-content-title-primary {
+        @apply inline;
+    }
+    .timeline-content-title-secondary {
+        @apply ml-3
+    }
+    .timeline-yr {
+        @apply mr-0;
+    }
+}
+
+@tailwind utilities;
