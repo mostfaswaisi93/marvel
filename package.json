@@ -4,12 +4,14 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "postcss src/main.css -o dist/css/main.css -w"
+        "dev": "postcss src/main.css -o dist/css/main.css -w",
+        "build": "postcss src/main.css -o dist/css/main.css"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "@fullhuman/postcss-purgecss": "^2.3.0",
         "autoprefixer": "^9.7.6",
         "postcss": "^7.0.29",
         "postcss-cli": "^7.1.1",
